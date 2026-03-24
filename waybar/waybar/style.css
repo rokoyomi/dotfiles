@@ -1,0 +1,160 @@
+@import "../.colors/waybar-colors.css";
+
+/**********************************************************
+ *                     GENERAL STYLES                     *
+ **********************************************************/
+
+/*****************************
+ * GENERAL WAYBAR STYLES
+ *****************************/
+
+* {
+    font-family: FontAwesome;
+    font-size: 1rem;
+}
+
+window#waybar {
+    transition-duration: .5s;
+    transition-property: background-color;
+    background-color: transparent;
+}
+
+.modules-left, .modules-right, .modules-center {
+    margin: 10px 10px 0px 10px;
+}
+
+@keyframes blink {
+    to {
+        color: #000000;
+        background-color: #ffffff;
+    }
+}
+
+/*****************************
+ * GENERAL MODULE STYLES
+ *****************************/
+
+#performance,
+#status,
+#clock,
+#mode,
+#idle_inhibitor,
+#workspaces,
+#privacy-item {
+    padding: 5px 15px;
+    margin: 0px;
+    border-radius: 10px;
+    color: @primary;
+    background-color: @surface;
+}
+
+/**********************************************************
+ *                      GROUP STYLES                      *
+ **********************************************************/
+
+/*****************************
+ * PERFORMANCE
+ *****************************/
+
+#performance {
+}
+
+#performance .drawer-child {
+    padding: 100px;
+}
+
+#memory,
+#cpu,
+#custom-nvidia {
+    padding: 0px 5px;
+    min-width: 50px;
+}
+
+#custom-separator {
+    padding: 0px 5px;
+}
+
+/*****************************
+ * STATUS
+ *****************************/
+
+#tray,
+#privacy-item,
+#custom-notifications {
+    padding: 0px 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @on_error;
+    background-color: @error;
+}
+
+#privacy-item {
+    color: @primary;
+}
+
+
+/**********************************************************
+ *                      OTHER MODULES                     *
+ **********************************************************/
+
+/*****************************
+ * WORKSPACES STYLE
+ *****************************/
+
+#workspaces {
+}
+
+#workspaces button {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin: 0px 5px;
+    min-width: 15px;
+    color: @primary;
+}
+
+#workspaces button:hover {
+    color: @on_tertiary;
+    background-color: @tertiary;
+}
+
+#workspaces button.urgent {
+    color: @on_error;
+    background-color: @error;
+}
+
+#workspaces button.active {
+    color: @on_secondary;
+    background-color: @secondary;
+    padding: 5px 10px;
+}
+
+/*****************************
+ * CLOCK STYLE
+ *****************************/
+
+#clock {
+    font-family: monospace;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*****************************
+ * IDLE INHIBITOR STYLE
+ *****************************/
+
+#idle_inhibitor {
+}
+
+#idle_inhibitor.activated {
+    color: @on_primary;
+    background-color: @primary;
+}
+
+

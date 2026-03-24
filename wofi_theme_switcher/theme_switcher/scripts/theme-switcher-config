@@ -1,0 +1,11 @@
+allow_images=true
+width=1536
+height=768
+show=drun
+prompt=Select Theme
+hide_scroll=true
+print_command=true
+insensitive=true
+columns=2
+orientation=vertical
+image_size=128

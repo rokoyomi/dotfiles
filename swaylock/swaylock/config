@@ -1,0 +1,11 @@
+# Image
+image="/home/rokko/.config/wallpapers/Port City.jpg"
+scaling=fill
+
+# Indicator
+indicator-caps-lock
+
+# Behavior
+show-failed-attempts
+
+indicator-idle-visible

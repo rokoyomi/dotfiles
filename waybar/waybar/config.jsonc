@@ -1,0 +1,135 @@
+{
+    "position": "top",
+    "height": 45,
+    "spacing": 5,
+    "reload_style_on_change" : true,
+
+    "modules-right": [
+        "idle_inhibitor",
+        "group/performance",
+        "group/status"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "group/performance": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/performance",
+            "memory",
+            "custom/separator",
+            "cpu",
+            "custom/separator",
+            "custom/nvidia"
+        ],
+        "drawer": {
+            "click-to-reveal": true,
+            "transition-left-to-right": false
+        }
+    },
+
+    "group/status": {
+        "orientation": "horizontal",
+        "modules": [
+            "tray",
+            "privacy",
+            "custom/notifications"
+        ]
+    },
+
+    "hyprland/workspaces": {
+        "format": "<sub>{icon}</sub>",
+        "format-icons" : {
+            "active": ""
+        },
+        "persistent-workspaces": {
+            "*": 6
+        },
+        "workspace-taskbar": {
+            "enable": true,
+            "update-active-window": true,
+            "format": "{icon} {title:.22}",
+            "icon-size": 18
+        }
+    },
+
+    "clock": {
+        "timezone": "Asia/Karachi",
+        "format": "{:%A, %b %d   %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ],
+        "ignore-monitor": true,
+        "ignore": [
+            {
+                "type": "audio-in",
+                "name": "cava"
+            },
+            {
+                "type": "screenshare",
+                "name": "obs"
+            }
+        ]
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "custom/notifications" : {
+        "format": "",
+        "on-click": "swaync-client -t"
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "<span rise='-1000'>{usage}%</span> <span rise='1000'></span>",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 2,
+        "format": "<span rise='-1000'>{used:0.1f}G/{total:0.1f}G</span> <span rise='1000'></span> "
+    },
+    "custom/nvidia": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=nounits,noheader",
+        "format": "{}% ",
+        "interval": 2
+    },
+    "custom/separator": {
+        "exec": "echo '|'"
+    },
+    "custom/performance": {
+        "exec": "echo ''"
+    }
+}

@@ -1,0 +1,70 @@
+@import ".config/.colors/wofi-colors.css";
+
+* {
+    /* all:unset; */
+    font-family: monospace;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-shadow:none;
+    background-color:transparent;
+}
+
+window {
+    all:unset;
+    border-radius: 15px;
+    border: 2px solid @primary;
+    background-color: alpha(@surface, 0.8);
+}
+
+#inner-box {
+    border: none;
+}
+#outer-box {
+    padding: 20px;
+    border: none;
+}
+
+#scroll {
+    margin-top: 20px;
+    border: none;
+}
+
+#input {
+    all:unset;
+    padding: 20px;
+    border: none;
+    outline: none;
+    color: @primary;
+    box-shadow: 1px 1px 5px alpha(@shadow, 0.7);
+    border-radius: 10px;
+    background-color: alpha(@surface, 0.7);
+}
+#input image {
+    border: none;
+    margin-right: 10px;
+}
+
+#text {
+    color: @on_surface;
+}
+
+#entry {
+    padding: 20px;
+    border: none;
+    color: @on_surface;
+    border-radius: 20px;
+}
+#entry #img {
+    border-radius: 20px;
+}
+#entry #text {
+    padding-left: 10px;
+}
+#entry:selected {
+    background-color: alpha(@surface, 0.7);
+    box-shadow: 1px 1px 5px alpha(@shadow, 0.7);
+}
+#entry:selected #text {
+    color: @primary;
+}
