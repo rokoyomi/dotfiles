@@ -1,6 +1,5 @@
 [config.wallpaper]
-command = "hyprctl"
-arguments = ["hyprpaper", "wallpaper", "DP-1,"]
+command = "hyprctl hyprpaper wallpaper 'DP-1,{{ image }}'"
 set = true
 
 [templates.hyprland]
