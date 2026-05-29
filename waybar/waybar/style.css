@@ -1,11 +1,11 @@
 @import "../.colors/waybar-colors.css";
 
 /**********************************************************
- *                     GENERAL STYLES                     *
+ *                         GENERAL                        *
  **********************************************************/
 
 /*****************************
- * GENERAL WAYBAR STYLES
+ * GENERAL
  *****************************/
 
 * {
@@ -16,22 +16,15 @@
 window#waybar {
     transition-duration: .5s;
     transition-property: background-color;
-    background-color: transparent;
+    background: transparent;
 }
 
 .modules-left, .modules-right, .modules-center {
-    margin: 10px 10px 0px 10px;
-}
-
-@keyframes blink {
-    to {
-        color: #000000;
-        background-color: #ffffff;
-    }
+    margin: 10px 10px 0 10px;
 }
 
 /*****************************
- * GENERAL MODULE STYLES
+ * BASE MODULES
  *****************************/
 
 #performance,
@@ -40,24 +33,23 @@ window#waybar {
 #mode,
 #idle_inhibitor,
 #workspaces,
+#workspaces button,
 #privacy-item {
     padding: 5px 15px;
-    margin: 0px;
+    margin: 0;
+    border: none;
     border-radius: 10px;
     color: @primary;
-    background-color: @surface;
+    background: @surface;
 }
 
 /**********************************************************
- *                      GROUP STYLES                      *
+ *                         GROUPS                         *
  **********************************************************/
 
 /*****************************
  * PERFORMANCE
  *****************************/
-
-#performance {
-}
 
 #performance .drawer-child {
     padding: 100px;
@@ -66,12 +58,12 @@ window#waybar {
 #memory,
 #cpu,
 #custom-nvidia {
-    padding: 0px 5px;
+    padding: 0 5px;
     min-width: 50px;
 }
 
 #custom-separator {
-    padding: 0px 5px;
+    padding: 0 5px;
 }
 
 /*****************************
@@ -81,7 +73,7 @@ window#waybar {
 #tray,
 #privacy-item,
 #custom-notifications {
-    padding: 0px 5px;
+    padding: 0 5px;
 }
 
 #tray > .passive {
@@ -94,67 +86,47 @@ window#waybar {
     background-color: @error;
 }
 
-#privacy-item {
-    color: @primary;
-}
-
-
 /**********************************************************
  *                      OTHER MODULES                     *
  **********************************************************/
 
 /*****************************
- * WORKSPACES STYLE
+ * WORKSPACES
  *****************************/
 
-#workspaces {
-}
-
 #workspaces button {
-    border: none;
-    border-radius: 10px;
-    padding: 5px 5px;
-    margin: 0px 5px;
+    margin: 0 5px;
     min-width: 15px;
-    color: @primary;
 }
 
 #workspaces button:hover {
     color: @on_tertiary;
-    background-color: @tertiary;
+    background: @tertiary;
 }
 
 #workspaces button.urgent {
     color: @on_error;
-    background-color: @error;
+    background: @error;
 }
 
 #workspaces button.active {
     color: @on_secondary;
-    background-color: @secondary;
-    padding: 5px 10px;
+    background: @secondary;
 }
 
 /*****************************
- * CLOCK STYLE
+ * CLOCK
  *****************************/
 
 #clock {
     font-family: monospace;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 /*****************************
- * IDLE INHIBITOR STYLE
+ * IDLE INHIBITOR
  *****************************/
-
-#idle_inhibitor {
-}
 
 #idle_inhibitor.activated {
     color: @on_primary;
-    background-color: @primary;
+    background: @primary;
 }
-
-
