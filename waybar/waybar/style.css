@@ -19,7 +19,9 @@ window#waybar {
     background: transparent;
 }
 
-.modules-left, .modules-right, .modules-center {
+.modules-left,
+.modules-right,
+.modules-center {
     margin: 10px 10px 0 10px;
 }
 
@@ -50,10 +52,6 @@ window#waybar {
 /*****************************
  * PERFORMANCE
  *****************************/
-
-#performance .drawer-child {
-    padding: 100px;
-}
 
 #memory,
 #cpu,
