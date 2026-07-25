@@ -69,8 +69,7 @@ window#waybar {
  *****************************/
 
 #tray,
-#privacy-item,
-#custom-notifications {
+#privacy-item {
     padding: 0 5px;
 }
 

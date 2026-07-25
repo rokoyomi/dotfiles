@@ -36,8 +36,7 @@
         "orientation": "horizontal",
         "modules": [
             "tray",
-            "privacy",
-            "custom/notifications"
+            "privacy"
         ]
     },
 
@@ -60,6 +59,8 @@
     "clock": {
         "timezone": "Asia/Karachi",
         "format": "{:%A, %b %d   %H:%M}",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
@@ -107,10 +108,6 @@
             "activated": "",
             "deactivated": ""
         }
-    },
-    "custom/notifications" : {
-        "format": "",
-        "on-click": "swaync-client -t"
     },
     "cpu": {
         "interval": 2,
