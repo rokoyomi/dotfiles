@@ -1,10 +1,14 @@
 
 vim.pack.add{
-    "https://github.com/norcalli/nvim-colorizer.lua"
+    "https://github.com/catgoose/nvim-colorizer.lua"
 }
 
-require("colorizer").setup{
-    "*";
-    css = { rgb_fn = true; };
-}
+require("colorizer").setup({
+    options = { parsers = { css = true } },
+})
+
+-- require("colorizer").setup{
+--     "*";
+--     css = { rgb_fn = true; };
+-- }
 
