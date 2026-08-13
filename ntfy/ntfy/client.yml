@@ -1,0 +1,5 @@
+default-host: http://192.168.100.9:80/
+
+subscribe:
+  - topic: remyndr_alerts
+    command: '~/.config/scripts/remyndr/remyndr-recv.py --type ntfy --raw "$raw" &'
