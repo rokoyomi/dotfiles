@@ -2,11 +2,14 @@
 vim.pack.add({
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/mason-org/mason.nvim",
-    "mason-org/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "https://github.com/mason-org/mason-lspconfig.nvim",
+    "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
     {
         src = "https://github.com/saghen/blink.cmp",
         branch = "v1",
+    },
+    {
+        src = "https://github.com/Saghen/blink.lib"
     },
     {
         src = "https://github.com/L3MON4D3/LuaSnip",
@@ -16,8 +19,13 @@ vim.pack.add({
 require('mason').setup{}
 
 local mason_servers = {
-    clangd = {},
-    gopls = {},
+    clangd = {
+        cmd = {
+            'clangd',
+            '--query-driver=/usr/bin/**/*-g++,/usr/bin/**/*-gcc,/usr/bin/g++,/usr/bin/gcc',
+        }
+    },
+    -- gopls = {},
     -- default lua_ls config
     lua_ls = {
         on_init = function(client)
